@@ -1,0 +1,201 @@
+<html>
+<head>
+  <title>
+    How to design a usable user interface 
+  </title>
+  <style>
+  table, th, td {
+    border: 1px solid black;
+  }
+  form{
+    font-size:large;
+  }
+  form label{
+    display: inline-block;
+    font-size:large;
+    margin-bottom:10px;
+    font-weight:bold;
+  }
+  form div{
+    margin-bottom:10px;
+  }
+  form span{
+    font-size:small;
+  }
+  form input{
+    width:100%;
+    height:30px;
+  }
+  form textarea{
+    width:100%;
+    padding:5px;
+  }
+
+  input,textarea{
+    font-size:16px;
+    margin-bottom:5px; 
+  }
+
+  button[type="submit"]{
+    width:100%;
+    height:30px;
+  }
+
+
+  #thanks{
+    display: none;
+    background: green;
+    padding:5px;
+    text-align:center;
+    margin: 10px 0px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    color:white;
+  }
+  h1{
+    margin: 50px;
+    text-align:center;
+  }
+  body{
+    padding-left: 50px;
+    padding-right:50px;
+    font-size:18px;
+    font-family: 'Open Sans', sans-serif;
+    background: #FEF4D3;
+    color:#2D2A16;
+  }
+  h1,h2{
+    text-transform:capitalize;
+  }
+  figcaption{
+    font-size:small;
+  }
+  img{
+    width:100%;
+    margin-bottom:2px;
+    background: white;
+  }
+
+</style>
+</head>
+<body>
+  <h1>
+    How to design a usable user interface
+  </h1>
+  <!-- Message when submitting the form -->
+  <div id="thanks" aria-labelledby="message">
+    <p id="message"> Thanks for you comment</p>
+  </div>
+  <p>
+    Today user intefaces have become all around us. Designing a usable user interface is very important in order to make people's lives easier. A usable user intrface is a one that is effective, effecient and satisfactort to all users who use it. In this pos I will give some tips in how to make the UI usable. 
+  </p>
+  <h2>
+    Know your users
+  </h2>
+  <p>
+    The first step is to know your users very well. Imaging that you are designing a website for kids. Obviously it will be different from designing it for  adults, for instance. As long as you gather more data about your users, it will be help you more in making your user intrface more usable to them. 
+  </p>
+  <p>
+    Kwoing that, what the things that you need to know about your users. The following are some examples of what you need to gather about users :
+  </p>
+  <ul>
+    <li>
+      age
+    </li>
+    <li>
+      gender
+    </li>
+    <li>
+      background 
+    </li>
+    <li>
+      preferences
+    </li>
+    <li>
+      abilities/disabilities
+    </li>
+  </ul>
+  <p>
+    a well known approach for user interface designers is to create what is called a <strong> persona </strong>. A persona contains information about an imaginery user representing one segment of the targeted users. the following image is an example of a persona. 
+  </p>
+  <figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/New_Readers_User_persona_-_Femi_-_Nigeria.png">
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File%3ANew_Readers_User_persona_-_Femi_-_Nigeria.png">By Reboot and the Wikimedia Foundation (Created by Reboot and the Wikimedia Foundation) [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</a></figcaption>
+  </figure>
+  <h2>
+    Prototype, Test, Repeat
+  </h2>
+  <p>
+    Before digging into code, prototype your user intrface. In this phase you should focus on layouting the main elements of your ui. Sketch your screens in a well structured way. You shouldn't focus on the visual design for now.
+  </p>
+  <p>
+    After you are done with your prototype, find real users and test it. By doing so, you will defenitely find some problems in your ui. Users will find some tasks confusing. Others will not know how to perfrom them. So, it is time to fix these issues. Go back to your prototype, fix it and test it again.
+  </p>
+  <h2>
+    Gather usage information
+  </h2>
+  <p>
+    After you are done will prototyping your are going to design and implement your app or website. Are you done by doing so? Of course not. You will start gathering what is called <strong> Usage Data </strong>. The following are some examples of usage data that you need to collect.
+  </p>
+  <table>
+    <tr>
+      <th>
+        data type
+      </th>
+      <th>
+        definition
+      </th>
+    </tr>
+    <tr>
+      <td>
+        Exit points
+      </td>
+      <td>
+        these are the screens where users exit your website from. you need to know them to know what are the causes for people to exit. 
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Session time
+      </td>
+      <td>
+        the time the user spend using your website/app per session. Sometimes you need people to spend little time and sometimes the opposite. So, knowing this will help.  
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Bounce rate
+      </td>
+      <td>
+        The rate of which users enters your website/app   then exits instantly without interacting with it. This piece of information is important because it indicates that there is a problem. The goal is to reduce this rate as much as we can.
+      </td>
+    </tr>
+  </table>
+  <h2>Conclusion</h2>
+  <p>
+    Desiging a usable user inteface is very important. To achive that, a designer needs to know about his users. After that, prototyping and testing is an essential step till. This step is done many times till a level of satisfaction is reached. Finally, we need to collect usage data, like Exit points, Session Time and Bounce rate. Please if you have any comments, ideas or suggestions write them below.
+  </p>
+  <hr>
+  <h2>
+    Comments
+  </h2>
+  <form onsubmit='showSubmitPopup()'>
+    <div>
+      <label for="name" > Your Name</label> <br/>
+      <input name="name" id="name" type="text" optional  aria-describedby="optional">
+      <span id="optional"> This field is optional </span>
+    </div>
+    <div>
+      <label for="comment"> Comment </label><br/>
+      <textarea name="comment" id="comment" cols="30" rows="10" placeholder="write your comment here .."></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <!-- Script -->
+  <script>
+    function showSubmitPopup(){
+      document.getElementById("thanks").style.display = 'block'
+    }
+  </script>
+</body>
+</html>
